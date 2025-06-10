@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bit Maker</title>
+  <!--CSS Link-->
+  <link rel="stylesheet" href="style.css" class="css">
+</head>
+<body>
+
+<div class="container">
+  <div class="column">
+    <div class="box">
+      <button type="button" onclick="makeBit(clickPower)">Click</button>
+      <p>Score:</p>
+      <p id="bitDisplay">0</p>
+      <p>Bytes</p>
+      <p>Bits per second: <span id="bpsDisplay">0</span></p>
+    </div>
+
+    <div class="box">
+      <h3>Clicker Multiplier</h3>
+      <button onclick="buyClickerUpgrade()">Buy Upgrade: Double Click Power</button>
+      <p>Click Multiplier: <span id="clickMultiplierDisplay"></span></p>
+      <p>Upgrade Cost: <span id="clickUpgradeCostDisplay"></span></p>
+    </div>
+
+    <div class="box">
+      <h2>Generators</h2>
+      <div id="AutoClickerPanel" class="generator-panel">
+        <h3>AutoClicker</h3>
+        <p>Owned: <span id="AutoClickerCount">0</span></p>
+        <p>Cost: <span id="AutoClickerCost">50</span></p>
+        <button onclick="buyGenerator('AutoClicker')">Buy AutoClicker</button>
+      </div>
+
+      <div id="KeyboardTyperPanel" class="generator-panel">
+        <h3>KeyboardTyper</h3>
+        <p>Owned: <span id="KeyboardTyperCount">0</span></p>
+        <p>Cost: <span id="KeyboardTyperCost">500</span></p>
+        <button onclick="buyGenerator('KeyboardTyper')">Buy KeyboardTyper</button>
+      </div>
+
+      <div id="CopyPasterPanel" class="generator-panel">
+        <h3>CopyPaster</h3>
+        <p>Owned: <span id="CopyPasterCount">0</span></p>
+        <p>Cost: <span id="CopyPasterCost">5000</span></p>
+        <button onclick="buyGenerator('CopyPaster')">Buy CopyPaster</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="box">
+      <h2>Global Upgrades</h2>
+      <div id="upgradesContainer" class="global-upgrades-panel">
+        <!-- Dynamic global upgrades will appear here -->
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>Purchased Upgrades</h3>
+      <div id="purchasedUpgradesContainer"></div>
+    </div>
+  </div>
+</div>
+
+<!--JS Script-->
+<script src="script.js"></script>
+</body>
+</html>
